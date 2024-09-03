@@ -2,7 +2,7 @@
 
 `ampAnalysis` was developed for the analysis of NGS amplicon deep sequences. It comprised a comprehensive pipeline to cover the entire process from amplicon assembly to insertions/deletions (InDels) detection. This software encompasses four main steps: (i) the obtention of samples’ Amps 8denoised amplicons), (ii) the trimming of non-α-gliadin Amps, (iii) the alignment of Amps to the BW208 Amps database, and (iv) the InDels/double-stranded oligodeoxynucleotide (dsODN) analysis.
 
-![Alt text](https://raw.githubusercontent.com/MiriamMarinS/ampAnalysis/image/Pipeline.tiff)
+![Alt text](https://github.com/MiriamMarinS/ampAnalysis/blob/main/images/Pipeline.tiff)
 
 For the obtention of sample Amps, raw reads were processed using the Usearch v9.2.64 (Edgar, 2010), with steps including merging (-fastq_mergepairs), low-quality filtering (-fastq_filter), dereplication (-fastqx_uniques), and denoising (-unoise2), using option values from Bayesian optimization performed in previous research (Guzmán-López et al., 2021a). The resulting denoised amplicons, termed Amps, had their abundance quantified by searching and mapping raw reads to the Amps database (-search_global). To filter for α-gliadin Amps, a α-gliadin sequences dabatase was constructed with sequences from the NCBI nt database. The ultra-fast software MMSeqs2 (Steinegger and Söding, 2017) was used to match the Amps against this database, removing any non-matching sequences to eliminate off-target products.
 Before InDels and dsODN analysis, each Amp sequence was aligned to the BW208 Amps database to identify the closest reference sequence. Two alignment strategies were used: (i) local alignment with BWA-MEM (Li, 2013), a Burrow-Wheeler Aligner for short reads, and (ii) global alignment with BBmap v39.01 (Bushnell, 2014).
@@ -16,15 +16,15 @@ The singel-guide RNAs (sgRNAs) were searched within the WT Amps to identify thei
 python ampAnlysisv2.py -i </path/to/raw_fastq/> -f -s -p <project name> -m <minampsize value, int> -a -t <path/to/metafile.txt> -n > log.out
 ```
 > [!NOTE]  
-> `-i` <string, /path/to/folder/ of raw fastq files>
-> `-f` If there are more than one sample to process, do not put prefix in -i option instead.
-> `-s` Run usearch per sample (parallelize).
-> `-p` <string, name of the project>
-> `-m` <int, minampsize usearch parameter value>
-> `-t` <string, /path/to/metafile.txt, example in /examples/metafile.txt>
-> `-c` <int, number of differences allowed in dsoligo search>
-> `-d` Search dsOligo in denoised amplicons.
-> `-a` Removed denoised amplicons not annotated as alpha-gliadins.
+> `-i` <string, /path/to/folder/ of raw fastq files> \
+> `-f` If there are more than one sample to process, do not put prefix in -i option instead. \
+> `-s` Run usearch per sample (parallelize). \
+> `-p` <string, name of the project> \
+> `-m` <int, minampsize usearch parameter value> \
+> `-t` <string, /path/to/metafile.txt, example in /examples/metafile.txt> \
+> `-c` <int, number of differences allowed in dsoligo search> \
+> `-d` Search dsOligo in denoised amplicons. \
+> `-a` Removed denoised amplicons not annotated as alpha-gliadins. \
 > `-n` Search indels in denoised amplicons.
 
 *Published in Marín-Sanz et al. (2024): Cas9 and Cas12a-mediated excision and replacement of the celiac disease-related α-gliadin immunogenic complex in hexaploid wheat*
