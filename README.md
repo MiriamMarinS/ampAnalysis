@@ -35,6 +35,7 @@ python ampAnlysisv2.py -i </path/to/raw_fastq/> -f -s -p <project name> -m <mina
 | MMSeqs2 |
 | BWA-MEM |
 | BBmap |
+| python libraries: biopython, numpy, pandas, progressbar, and re |
 
 *Published in Marín-Sanz et al. (2024): Cas9 and Cas12a-mediated excision and replacement of the celiac disease-related α-gliadin immunogenic complex in hexaploid wheat*
 
