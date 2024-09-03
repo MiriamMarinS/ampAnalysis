@@ -6,7 +6,7 @@
 
 For the obtention of sample Amps, raw reads were processed using the Usearch v9.2.64 (Edgar, 2010), with steps including merging (-fastq_mergepairs), low-quality filtering (-fastq_filter), dereplication (-fastqx_uniques), and denoising (-unoise2), using option values from Bayesian optimization performed in previous research (Guzmán-López et al., 2021a). The resulting denoised amplicons, termed Amps, had their abundance quantified by searching and mapping raw reads to the Amps database (-search_global). To filter for α-gliadin Amps, an α-gliadins' sequences database was constructed with sequences from the NCBI nt database. The ultra-fast software MMSeqs2 (Steinegger and Söding, 2017) matched the Amps against this database, removing any non-matching sequences to eliminate off-target products.
 Before InDels and dsODN analyses, each Amp sequence was aligned to the BW208 Amps database to identify the closest reference sequence. Two alignment strategies were used: (i) local alignment with BWA-MEM (Li, 2013), a Burrow-Wheeler Aligner for short reads, and (ii) global alignment with BBmap v39.01 (Bushnell, 2014).
-| :exclamation:  You have to read about this   |
+| :exclamation:  Equipment used   |
 |----------------------------------------------|
 |All these steps were executed using the ampAnalysis software on an HPC Cluster with 24 Bull x440 nodes, with 192 GB of RAM per node, totaling 960 cores (Advanced Computing Unit (UCAS), University of Córdoba, Spain).|
 
@@ -28,5 +28,12 @@ python ampAnlysisv2.py -i </path/to/raw_fastq/> -f -s -p <project name> -m <mina
 > `-d` Search dsOligo in denoised amplicons. \
 > `-a` Removed denoised amplicons not annotated as alpha-gliadins. \
 > `-n` Search indels in denoised amplicons.
+
+| :warning: Required softwares           |
+|:----------------------------|
+| Usearch     |
+| MMSeqs2 |
+| BWA-MEM |
+| BBmap |
 
 *Published in Marín-Sanz et al. (2024): Cas9 and Cas12a-mediated excision and replacement of the celiac disease-related α-gliadin immunogenic complex in hexaploid wheat*
