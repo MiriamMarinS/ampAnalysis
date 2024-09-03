@@ -39,8 +39,8 @@ python ampAnlysisv2.py -i </path/to/raw_fastq/> -f -s -p <project name> -m <mina
 *Published in Marín-Sanz et al. (2024): Cas9 and Cas12a-mediated excision and replacement of the celiac disease-related α-gliadin immunogenic complex in hexaploid wheat*
 
 ### **References**
-Bushnell, B. (2014) BBMap: a fast, accurate, splice-aware aligner. Lawrence Berkeley National Lab.(LBNL), Berkeley, CA (United States). \
-Edgar, R. (2010) Usearch. Lawrence Berkeley National Lab.(LBNL), Berkeley, CA (United States). \
-Guzmán-López, M.H., Marín-Sanz, M., Sánchez-León, S., and Barro, F. (2021a) A bioinformatic workflow for InDel analysis in the wheat multi-copy α-gliadin gene family engineered with CRISPR/Cas9. Int. J. Mol. Sci., 22, 13076. \
-Li, H. (2013) Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM. arXiv Prepr. arXiv1303.3997. \
-Steinegger, M. and Söding, J. (2017) MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets. Nat. Biotechnol., 35, 1026–1028.
+*Bushnell, B. (2014) BBMap: a fast, accurate, splice-aware aligner. Lawrence Berkeley National Lab.(LBNL), Berkeley, CA (United States).* \
+*Edgar, R. (2010) Usearch. Lawrence Berkeley National Lab.(LBNL), Berkeley, CA (United States).* \
+*Guzmán-López, M.H., Marín-Sanz, M., Sánchez-León, S., and Barro, F. (2021a) A bioinformatic workflow for InDel analysis in the wheat multi-copy α-gliadin gene family engineered with CRISPR/Cas9. Int. J. Mol. Sci., 22, 13076.* \
+*Li, H. (2013) Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM. arXiv Prepr. arXiv1303.3997.* \
+*Steinegger, M. and Söding, J. (2017) MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets. Nat. Biotechnol., 35, 1026–1028.*
