@@ -1,4 +1,4 @@
-# Remove not alpha-gliadin denoised amplicons from the fasta file based on blast results
+# Remove not alpha-gliadin denoised amplicons from the fasta files based on blast results
 
 from Bio import SeqIO
 import argparse
