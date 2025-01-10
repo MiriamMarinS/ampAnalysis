@@ -83,7 +83,6 @@ otus_dsoligo = nonRedundant([item[0] for item in bwotus_dsoligo_values] + [item[
 otus_dsoligo_fwd = nonRedundant([item[0] for item in bwotus_dsoligo_values if item[1] == 'fwd'] + [item[0] for item in bbotus_dsoligo_values if item[1] == 'fwd'])
 otus_dsoligo_rev = nonRedundant([item[0] for item in bwotus_dsoligo_values if item[1] == 'rev'] + [item[0] for item in bbotus_dsoligo_values if item[1] == 'rev'])
 
-'''
 # Include otus with perfect substitution of part of Amp with the dsoligo in InDels statistics
 if dsOligo_status == 'True':
    for otu in otus_dsoligo:
@@ -96,7 +95,6 @@ if dsOligo_status == 'True':
             otus_indels.append(otu)
             otus_dels.append(otu)
             otus_ins.append(otu)
-'''
 
 # Combined indels per sgRNA
 otus_sgRNAs = {}
